@@ -14,7 +14,7 @@ type
     infos: seq[SynchronizedFileInfo]
 
 proc loadConfig(): Config =
-  let configFile = open("urlsync.cfg", mode=FileMode.fmReadWriteExisting)
+  let configFile = open("syncurl.cfg", mode=FileMode.fmReadWriteExisting)
   defer: close configFile
   result = Config()  
   result.infos = newSeq[SynchronizedFileInfo]()
